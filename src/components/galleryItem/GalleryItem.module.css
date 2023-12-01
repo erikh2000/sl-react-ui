@@ -1,0 +1,48 @@
+@value colors: "../commonPalette.module.css";
+@value button, button-text, button-highlight, button-text-highlight, button-disabled, button-text-disabled, primary-off-white from colors;
+
+.closedItem {
+    background-color: primary-off-white;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.closedItem::before {
+    content: "▼";
+    display: inline;
+    font-size: 1rem;
+}
+
+.closedItem > h1 {
+    display: inline;
+    font-size: 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.openItem {
+    background-color: primary-off-white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.openItem::before {
+    content: "▲";
+    display: inline;
+    font-size: 1rem;
+}
+
+.openItem > h1 {
+    display: inline;
+    font-size: 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.openItem > p {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
