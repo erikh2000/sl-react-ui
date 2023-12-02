@@ -1,5 +1,5 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import ProgressBar from "./ProgressBar.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import ProgressBar from "./ProgressBar";
 import styles from './ProgressBarGalleryItem.module.css';
 
 function ProgressBarGalleryItem() {
