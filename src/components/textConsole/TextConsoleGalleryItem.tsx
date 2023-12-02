@@ -1,6 +1,6 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import TextConsole from "./TextConsole.tsx";
-import TextConsoleBuffer from "./TextConsoleBuffer.ts";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import TextConsole from "./TextConsole";
+import TextConsoleBuffer from "./TextConsoleBuffer";
 import styles from './TextConsoleGalleryItem.module.css';
 
 const buffer = new TextConsoleBuffer(10);

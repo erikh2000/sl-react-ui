@@ -1,9 +1,9 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import OkayDialog from "./OkayDialog.tsx";
-import ConfirmCancelDialog from "./ConfirmCancelDialog.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import OkayDialog from "./OkayDialog";
+import ConfirmCancelDialog from "./ConfirmCancelDialog";
 
 import { useState } from "react";
-import TextInputDialog from "@/components/modalDialogs/TextInputDialog.tsx";
+import TextInputDialog from "@/components/modalDialogs/TextInputDialog";
 
 export function _fixInputNoNumbers(value:string):string|null {
   let fixed = value.replace(/[0-9]/g, '');

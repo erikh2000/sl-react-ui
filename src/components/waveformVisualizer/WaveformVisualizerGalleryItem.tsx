@@ -1,12 +1,12 @@
-import GalleryItem from '@/components/galleryItem/GalleryItem.tsx';
-import WaveformVisualizer from "./WaveformVisualizer.tsx";
+import GalleryItem from '@/components/galleryItem/GalleryItem';
+import WaveformVisualizer from "./WaveformVisualizer";
 import styles from './WaveformVisualizerGalleryItem.module.css';
-import TEST_SAMPLES from './testSamples.ts';
+import TEST_SAMPLES from './testSamples';
 
 import {useEffect, useState} from 'react';
-import IWaveformAmplitudeMarker from "@/components/waveformVisualizer/WaveformAmplitudeMarker.tsx";
-import IWaveformBlockMarker from "@/components/waveformVisualizer/WaveformBlockMarker.tsx";
-import IWaveformTimeMarker, {MarkerType} from "@/components/waveformVisualizer/WaveformTimeMarker.tsx";
+import IWaveformAmplitudeMarker from "@/components/waveformVisualizer/WaveformAmplitudeMarker";
+import IWaveformBlockMarker from "@/components/waveformVisualizer/WaveformBlockMarker";
+import IWaveformTimeMarker, {MarkerType} from "@/components/waveformVisualizer/WaveformTimeMarker";
 
 function _createAmplitudeMarkers():IWaveformAmplitudeMarker[] {
   return [

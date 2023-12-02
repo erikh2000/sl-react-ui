@@ -1,5 +1,5 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import LoadingBox from "./LoadingBox.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import LoadingBox from "./LoadingBox";
 import styles from './LoadingBoxGalleryItem.module.css';
 
 function LoadingBoxGalleryItem() {

@@ -31,7 +31,7 @@ My code and other files in this repository are licensed under the MIT open sourc
 
 But if you see a LICENSE file in a sub-directory of the repository, that license will apply to all files found in that directory.
 
-Also, avoid using fonts or other resources hosted from shared.wisp.studio. The website has CORS rules that prevent resources to be served from pages that don't match either "localhost:3000" or "wisp.studio". You can circumvent this, e.g., downloading the file and re-hosting it. But some files at that website have licenses that I purchased which aren't transferable to you.
+Also, avoid using fonts or other resources hosted from shared.wisp.studio. The website has CORS rules that prevent resources to be served from pages that don't match either "localhost:3000" or one of my domains. You can circumvent this, e.g., downloading the file and re-hosting it. But some files at that website have licenses that I purchased which aren't transferable to you.
 
 ### Contributing
 

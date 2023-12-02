@@ -1,5 +1,5 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import Pane, { ButtonDefinition } from "./Pane.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import Pane, { ButtonDefinition } from "./Pane";
 import styles from './Pane.module.css';
 
 function PaneGalleryItem() {

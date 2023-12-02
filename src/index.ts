@@ -1,5 +1,5 @@
-export * from './common/canvasUtil.ts';
-export { default as UseEffectOnce } from './common/useEffectOnce.ts';
+export * from './common/canvasUtil';
+export { default as UseEffectOnce } from './common/useEffectOnce';
 export { default as ActionBar } from './components/actionBar/ActionBar';
 export { default as Canvas } from './components/canvas/Canvas';
 export { default as ContentButton } from './components/contentButton/ContentButton';
@@ -17,7 +17,7 @@ export { default as Selector } from './components/selector/Selector';
 export { default as Slider } from './components/slider/Slider';
 export { default as TextConsole } from './components/textConsole/TextConsole';
 export { default as ToastManager } from './components/toasts/ToastManager';
-export * from './components/toasts/toastUtil.ts';
+export * from './components/toasts/toastUtil';
 export type { default as WaveformAmplitudeMarker } from './components/waveformVisualizer/WaveformAmplitudeMarker';
 export type { default as WaveformBlockMarker } from './components/waveformVisualizer/WaveformBlockMarker';
 export type { default as WaveformTimeMarker } from './components/waveformVisualizer/WaveformTimeMarker';

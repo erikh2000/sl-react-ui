@@ -1,5 +1,5 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import ContentButton from "./ContentButton.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import ContentButton from "./ContentButton";
 
 function ContentButtonGallery() {
   return (

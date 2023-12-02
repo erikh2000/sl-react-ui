@@ -1,5 +1,5 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import Selector from "./Selector.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import Selector from "./Selector";
 
 import { useState } from "react";
 

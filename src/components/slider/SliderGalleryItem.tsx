@@ -1,5 +1,5 @@
 import Slider from "./Slider";
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
 
 function SliderGalleryItem() {
   return (

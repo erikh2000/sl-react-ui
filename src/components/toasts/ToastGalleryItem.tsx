@@ -1,6 +1,6 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import ToastPane from "@/components/toasts/ToastPane.tsx";
-import {infoToast, errorToast, importantToast}  from './toastUtil.ts';
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import ToastPane from "@/components/toasts/ToastPane";
+import {infoToast, errorToast, importantToast}  from './toastUtil';
 function ToastGalleryItem() {
   function _showTest1(event:React.MouseEvent<HTMLHeadingElement>) { infoToast('Test 1'); event.stopPropagation();}
   function _showTest2(event:React.MouseEvent<HTMLHeadingElement>) { errorToast('Test 2'); event.stopPropagation();}

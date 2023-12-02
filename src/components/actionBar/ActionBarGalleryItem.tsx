@@ -1,5 +1,5 @@
-import GalleryItem from "@/components/galleryItem/GalleryItem.tsx";
-import ActionBar from "./ActionBar.tsx";
+import GalleryItem from "@/components/galleryItem/GalleryItem";
+import ActionBar from "./ActionBar";
 
 function ActionBarGalleryItem() {
   const buttons = [

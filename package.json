@@ -1,6 +1,9 @@
 {
   "name": "sl-react-ui",
   "description": "Seespace Labs React UI Library",
+  "main": "dist/sl-react-ui.umd.cjs",
+  "module": "dist/sl-react-ui.js",
+  "types": "dist/sl-react-ui.d.ts",
   "private": false,
   "license": "MIT",
   "author": "Erik Hermansen",
@@ -8,11 +11,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build &&  tsc &&  mv dist/index.d.ts dist/sl-react-ui.d.ts &&  rm dist/favicon.ico",
+    "clean": "rm -rf .tsBuild dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -27,5 +31,11 @@
     "eslint-plugin-react-refresh": "^0.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
 }

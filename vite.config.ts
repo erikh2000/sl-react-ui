@@ -15,8 +15,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: 'src/index.ts',
-      name: 'sl-react-ui'
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'sl-react-ui',
+      formats: ['es', 'umd']
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -28,6 +29,7 @@ export default defineConfig({
           'react-dom': 'ReactDOM'
         }
       }
-    }
+    },
+    sourcemap: true
   }
 });

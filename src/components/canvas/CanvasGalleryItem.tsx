@@ -1,6 +1,6 @@
 import Canvas from './Canvas';
 import styles from './CanvasGalleryItem.module.css';
-import GalleryItem from '@/components/galleryItem/GalleryItem.tsx';
+import GalleryItem from '@/components/galleryItem/GalleryItem';
 
 import { useState } from 'react';
 

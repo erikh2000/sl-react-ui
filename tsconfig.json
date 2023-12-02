@@ -9,15 +9,23 @@
     "paths": {
       "@/*": ["./*"]
     },
+    "declaration": true,
     
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    /* "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+    "noEmit": true, 
+    "jsx": "react-jsx", */
 
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": ".tsBuild",
+    "declarationDir": "dist",
+    
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
