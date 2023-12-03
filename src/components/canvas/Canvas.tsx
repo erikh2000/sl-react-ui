@@ -21,8 +21,7 @@ interface IProps {
 }
 
 function _updateCanvasDimensions(container:HTMLDivElement, setContainerDimensions:Function, setFullScreenCanvasStyle:Function) {
-  const CX_PADDING = 8, CY_PADDING = 8; // I would like to figure out what is causing the need for this padding.
-  const nextDimensions:[number,number] = [container.clientWidth - CX_PADDING, container.clientHeight - CY_PADDING];
+  const nextDimensions:[number,number] = [container.clientWidth, container.clientHeight];
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   const nextFullScreenCanvasStyle:CSSProperties = { position:'fixed', top:`0`, left:`0`, width:`${screenWidth}px`, height: `${screenHeight}px`, zIndex:1000 };
@@ -75,7 +74,7 @@ function Canvas(props:IProps) {
     <button className={styles.exitButton} onClick={(e) => {e.stopPropagation(); onExitFullScreen()}}>Exit Fullscreen</button> : null;
 
   return (
-    <div className={className} ref={containerRef}>
+    <div className={`${styles.clipOverflow} ${className}`} ref={containerRef}>
       {exitFullScreenButton}
       <canvas
         style={canvasStyle}

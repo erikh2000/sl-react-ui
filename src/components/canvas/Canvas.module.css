@@ -36,3 +36,8 @@
 .exitButtonDisabled:hover {
     background: button-disabled;
 }
+
+.clipOverflow {
+    overflow-x: clip;
+    overflow-y: clip;
+}
