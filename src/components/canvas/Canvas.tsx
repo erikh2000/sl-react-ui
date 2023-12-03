@@ -4,7 +4,7 @@ import {useRef, useEffect, useState, CSSProperties, MouseEventHandler} from 'rea
 const NO_ANIMATION_IN_PROGRESS = -1;
 let animationFrameId = NO_ANIMATION_IN_PROGRESS;
 
-interface IDrawCallback {
+export interface IDrawCallback {
   (context:CanvasRenderingContext2D):void;
 }
 
