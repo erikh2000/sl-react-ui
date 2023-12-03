@@ -9,7 +9,6 @@ interface IDrawCallback {
 }
 
 interface IProps {
-  className:string, // Required to set the size of the canvas. Intentionally not using an explicit width/height prop so that this component can handle resizing with responsive layouts.
   isAnimated:boolean,
   isFullScreen?:boolean,
   onClick?:MouseEventHandler<HTMLCanvasElement>,
@@ -32,7 +31,7 @@ function _updateCanvasDimensions(container:HTMLDivElement, setContainerDimension
 function Canvas(props:IProps) {
   const [containerDimensions, setContainerDimensions] = useState<[number,number]|null>(null);
   const [fullScreenCanvasStyle, setFullScreenCanvasStyle] = useState<CSSProperties>({});
-  const { className, onClick, onDraw, onExitFullScreen,
+  const { onClick, onDraw, onExitFullScreen,
     onMouseDown, onMouseMove, onMouseUp,
     isAnimated, isFullScreen } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -73,8 +72,9 @@ function Canvas(props:IProps) {
   const exitFullScreenButton = isFullScreen && onExitFullScreen ?
     <button className={styles.exitButton} onClick={(e) => {e.stopPropagation(); onExitFullScreen()}}>Exit Fullscreen</button> : null;
 
+  const containerStyle:CSSProperties = { width: '100%', height: '100%', overflow: 'clip' };
   return (
-    <div className={`${styles.clipOverflow} ${className}`} ref={containerRef}>
+    <div style={containerStyle} ref={containerRef}>
       {exitFullScreenButton}
       <canvas
         style={canvasStyle}

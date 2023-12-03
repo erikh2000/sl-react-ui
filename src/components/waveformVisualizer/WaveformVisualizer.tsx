@@ -196,7 +196,7 @@ function WaveformVisualizer(props:IProps) {
     }
   }
 
-  return <Canvas className={className} isAnimated={false} onDraw={_onDraw} />;
+  return <div className={className}><Canvas isAnimated={false} onDraw={_onDraw} /></div>;
 }
 
 export default WaveformVisualizer;

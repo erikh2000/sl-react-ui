@@ -1,5 +1,4 @@
 import Canvas from './Canvas';
-import styles from './CanvasGalleryItem.module.css';
 import GalleryItem from '@/components/galleryItem/GalleryItem';
 
 import { useState } from 'react';
@@ -46,12 +45,11 @@ function CanvasGalleryItem() {
   return (
     <GalleryItem title="Canvas" description="A canvas component that handles resizing and animation.">
       <h2>Test 1: Black X on red background.</h2>
-      <Canvas className={styles.canvasContainer} isAnimated={false} onDraw={_drawX}/>
+      <Canvas isAnimated={false} onDraw={_drawX}/>
       <h2>Test 2: Black line moves left to right.</h2>
-      <Canvas className={styles.canvasContainer} isAnimated={true} onDraw={_drawAnimated}/>
+      <Canvas isAnimated={true} onDraw={_drawAnimated}/>
       <h2>Test 3: Click on canvas to go fullscreen.</h2>
-      <Canvas 
-        className={styles.canvasContainer} 
+      <Canvas
         isAnimated={false} 
         onDraw={_drawX} 
         isFullScreen={isFullscreen} 
