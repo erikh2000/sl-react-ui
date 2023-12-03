@@ -1,7 +1,9 @@
 export * from './common/canvasUtil';
-export { default as UseEffectOnce } from './common/useEffectOnce';
+export { default as useEffectOnce } from './common/useEffectOnce';
+export * from './common/scaleUtil';
 export { default as ActionBar } from './components/actionBar/ActionBar';
 export { default as Canvas } from './components/canvas/Canvas';
+export type { IDrawCallback } from './components/canvas/Canvas';
 export { default as ContentButton } from './components/contentButton/ContentButton';
 export { default as LoadingBox } from './components/loadingBox/LoadingBox';
 export { default as ConfirmCancelDialog } from './components/modalDialogs/ConfirmCancelDialog';
