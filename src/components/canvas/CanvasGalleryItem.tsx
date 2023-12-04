@@ -55,6 +55,7 @@ function CanvasGalleryItem() {
         isFullScreen={isFullscreen} 
         onClick={(e) => { e.stopPropagation(); setIsFullscreen(true);  }}
         onExitFullScreen={() => { setIsFullscreen(false); }}
+        exitFullScreenText="Lemme out!"
       />
     </GalleryItem>
   );

@@ -14,6 +14,7 @@ interface IProps {
   onClick?:MouseEventHandler<HTMLCanvasElement>,
   onDraw:IDrawCallback,
   onExitFullScreen?:() => void,
+  exitFullScreenText?:string,
   onMouseMove?:MouseEventHandler<HTMLCanvasElement>,
   onMouseDown?:MouseEventHandler<HTMLCanvasElement>,
   onMouseUp?:MouseEventHandler<HTMLCanvasElement>
@@ -33,7 +34,7 @@ function Canvas(props:IProps) {
   const [fullScreenCanvasStyle, setFullScreenCanvasStyle] = useState<CSSProperties>({});
   const { onClick, onDraw, onExitFullScreen,
     onMouseDown, onMouseMove, onMouseUp,
-    isAnimated, isFullScreen } = props;
+    isAnimated, isFullScreen, exitFullScreenText } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [canvasWidth, canvasHeight] = containerDimensions ?? [0,0];
@@ -69,8 +70,10 @@ function Canvas(props:IProps) {
   }, [onDraw, containerDimensions]);
 
   const canvasStyle:CSSProperties = isFullScreen ? fullScreenCanvasStyle : {};
-  const exitFullScreenButton = isFullScreen && onExitFullScreen ?
-    <button className={styles.exitButton} onClick={(e) => {e.stopPropagation(); onExitFullScreen()}}>Exit Fullscreen</button> : null;
+  const exitFullScreenButton = isFullScreen && onExitFullScreen 
+    ? <button className={styles.exitButton} onClick={(e) => {e.stopPropagation(); onExitFullScreen()}}>
+      {exitFullScreenText ?? 'Exit Fullscreen'}</button> 
+    : null;
 
   const containerStyle:CSSProperties = { width: '100%', height: '100%', overflow: 'clip' };
   return (
