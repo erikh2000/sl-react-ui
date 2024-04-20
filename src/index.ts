@@ -17,6 +17,7 @@ export { default as Pane } from './components/pane/Pane';
 export { default as ProgressBar } from './components/progressBar/ProgressBar';
 export { default as Selector } from './components/selector/Selector';
 export { default as Slider } from './components/slider/Slider';
+export { default as TextConsoleBuffer } from './components/textConsole/TextConsoleBuffer';
 export { default as TextConsole } from './components/textConsole/TextConsole';
 export { default as ToastManager } from './components/toasts/ToastManager';
 export * from './components/toasts/toastUtil';
