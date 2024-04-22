@@ -21,6 +21,7 @@ export { default as TextConsole } from './components/textConsole/TextConsole';
 export type { TextConsoleLine } from './components/textConsole/TextConsoleBuffer';
 export { default as TextConsoleBuffer } from './components/textConsole/TextConsoleBuffer';
 export { default as ToastManager } from './components/toasts/ToastManager';
+export { default as ToastPane } from './components/toasts/ToastPane';
 export * from './components/toasts/toastUtil';
 export type { default as WaveformAmplitudeMarker } from './components/waveformVisualizer/WaveformAmplitudeMarker';
 export type { default as WaveformBlockMarker } from './components/waveformVisualizer/WaveformBlockMarker';
