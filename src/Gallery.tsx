@@ -11,6 +11,8 @@ import ModalDialogsGalleryItem from "@/components/modalDialogs/ModalDialogsGalle
 import ContentButtonGalleryItem from "@/components/contentButton/ContentButtonGalleryItem";
 import PaneGalleryItem from "@/components/pane/PaneGalleryItem";
 import ActionBarGalleryItem from "@/components/actionBar/ActionBarGalleryItem";
+import SpinnerGalleryItem from './components/spinner/SpinnerGalleryItem';
+import TimePickerGalleryItem from './components/timePicker/TimePickerGalleryItem';
 
 function Gallery() {
   return (
@@ -26,7 +28,9 @@ function Gallery() {
       <ProgressBarGalleryItem />
       <SelectorGalleryItem />
       <SliderGalleryItem />
+      <SpinnerGalleryItem />
       <TextConsoleGalleryItem />
+      <TimePickerGalleryItem />
       <ToastGalleryItem />
       <WaveformVisualizerGalleryItem />
       
