@@ -5,7 +5,8 @@ import {useState, useRef, useEffect} from "react";
 
 interface IProps {
   value: number;
-  onChange: (value:number) => void;
+  onChange?: (value:number) => void; // For getting final value after dragging.
+  onUpdate?: (value:number) => void; // For getting updated values while dragging.
 }
 
 type LayoutMeasurements = {
@@ -37,7 +38,7 @@ function _calcThumbPosFromValue(value:number, layoutMeasurements:LayoutMeasureme
 function _calcValueFromThumbPos(thumbPos:number, layoutMeasurements:LayoutMeasurements):number {
   const {maxX, minX, thumbWidth, travelWidth} = layoutMeasurements;
   const ratio = (clamp(thumbPos + (thumbWidth/2), minX, maxX) - minX) / travelWidth;
-  return Math.round(ratio * 100);
+  return ratio * 100;
 }
 
 function _calcThumbPosFromDragX(dragX:number, layoutMeasurements:LayoutMeasurements):number {
@@ -52,7 +53,7 @@ function _updateLayoutMeasurementsAndThumbPos(container:HTMLDivElement, thumb:HT
 }
 
 function Slider(props:IProps) {
-  const {onChange, value} = props;
+  const {onChange, onUpdate, value} = props;
   const [thumbPos, setThumbPos] = useState<number>(0);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [wasDragging, setWasDragging] = useState<boolean>(false);
@@ -80,9 +81,12 @@ function Slider(props:IProps) {
   }, [setThumbPos, setLayoutMeasurements, value]);
   
   useEffect(() => {
-    if (isDragging === wasDragging) return;
-    if (!isDragging) onChange(_calcValueFromThumbPos(thumbPos, layoutMeasurements));
-    setWasDragging(isDragging);
+    const isSendingOnChange = !isDragging && wasDragging && onChange;
+    const isSendingOnUpdate = isDragging && onUpdate;
+    const nextValue = isSendingOnUpdate || isSendingOnChange ? _calcValueFromThumbPos(thumbPos, layoutMeasurements) : 0;
+    if (isSendingOnUpdate) onUpdate(nextValue);
+    if (isSendingOnChange) onChange(nextValue);
+    if (isDragging !== wasDragging) setWasDragging(isDragging);
   }, [thumbPos, isDragging, wasDragging, layoutMeasurements]);
   
   return (
