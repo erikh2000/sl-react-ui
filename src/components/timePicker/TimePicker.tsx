@@ -12,19 +12,16 @@ function TimePicker(props:Props) {
     const [hourI, minuteI, amPmI] = decodeTime(date);
 
     function _onHourChange(nextHourI:number) {
-      console.log('TimePicker _onHourChange nextHourI:', nextHourI);
       const nextDate = encodeTime(nextHourI, minuteI, amPmI);
       onChange(nextDate);
     }
 
     function _onMinuteChange(nextMinuteI:number) {
-      console.log('TimePicker _onMinuteChange nextMinuteI:', nextMinuteI);
       const nextDate = encodeTime(hourI, nextMinuteI, amPmI);
       onChange(nextDate);
     }
 
     function _onAmPmChange(nextAmPmI:number) {
-      console.log('TimePicker _onAmPmChange nextAmPmI:', nextAmPmI);
       const nextDate = encodeTime(hourI, minuteI, nextAmPmI);
       onChange(nextDate);
     }

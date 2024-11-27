@@ -15,14 +15,12 @@ function Spinner(props:Props) {
 
     function _onIncreaseClick() {
       let nextOptionNo = useOptionNo + 1;
-      console.log('Spinner _onIncreaseClick nextOptionNo:', nextOptionNo);
       if (nextOptionNo >= options.length) { nextOptionNo = wrapAround ? 0 : options.length - 1; }
       onChange(nextOptionNo);
     }
 
     function _onDecreaseClick() {
       let nextOptionNo = useOptionNo - 1;
-      console.log('Spinner _onIncreaseClick nextOptionNo:', nextOptionNo);
       if (nextOptionNo < 0) { nextOptionNo = wrapAround ? options.length - 1 : 0; }
       onChange(nextOptionNo);
     }
