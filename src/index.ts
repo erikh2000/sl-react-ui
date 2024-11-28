@@ -30,4 +30,5 @@ export * from './components/toasts/toastUtil';
 export type { default as WaveformAmplitudeMarker } from './components/waveformVisualizer/WaveformAmplitudeMarker';
 export type { default as WaveformBlockMarker } from './components/waveformVisualizer/WaveformBlockMarker';
 export type { default as WaveformTimeMarker } from './components/waveformVisualizer/WaveformTimeMarker';
+export { default as WaitingEllipsis } from './components/waitingEllipsis/WaitingEllipsis';
 export { default as WaveformVisualizer } from './components/waveformVisualizer/WaveformVisualizer';

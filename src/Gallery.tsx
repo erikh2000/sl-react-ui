@@ -14,6 +14,7 @@ import ActionBarGalleryItem from "@/components/actionBar/ActionBarGalleryItem";
 import SpinnerGalleryItem from './components/spinner/SpinnerGalleryItem';
 import TimePickerGalleryItem from './components/timePicker/TimePickerGalleryItem';
 import DatePickerGalleryItem from './components/datePicker/DatePickerGalleryItem';
+import WaitingEllipsisGalleryItem from './components/waitingEllipsis/WaitingEllipsisGalleryItem';
 
 function Gallery() {
   return (
@@ -34,6 +35,7 @@ function Gallery() {
       <TextConsoleGalleryItem />
       <TimePickerGalleryItem />
       <ToastGalleryItem />
+      <WaitingEllipsisGalleryItem />
       <WaveformVisualizerGalleryItem />
       
     </div>
