@@ -34,7 +34,7 @@ function TextInputDialog(props:IProps) {
   function _onValueChange(nextValue:string) {
     if (onFixInput) {
       const fixedValue = onFixInput(nextValue);
-      if (fixedValue) nextValue = fixedValue;
+      if (fixedValue !== null) nextValue = fixedValue;
     }
     setValue(nextValue);
     const failures = onSubmitValidate ? onSubmitValidate(nextValue) : null;

@@ -7,7 +7,7 @@ import TextInputDialog from "@/components/modalDialogs/TextInputDialog";
 
 export function _fixInputNoNumbers(value:string):string|null {
   let fixed = value.replace(/[0-9]/g, '');
-  return fixed === value ? null : fixed;
+  return fixed;
 }
 
 export function _validateForFail(value:string):string[]|null {

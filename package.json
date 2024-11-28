@@ -7,7 +7,7 @@
   "private": false,
   "license": "MIT",
   "author": "Erik Hermansen",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,8 +18,8 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.10",

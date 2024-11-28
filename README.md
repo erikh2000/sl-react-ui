@@ -23,7 +23,7 @@ Do you want to use any of them in your projects? Go for it!
 
 If there is any logic that is complex enough to warrant unit testing, it should be moved out of the component and into a separate module. The component should be a thin wrapper around the module. The module should be unit tested.
 
-For testing the behavior of the UI, just open index.html in a browser and click through manually. I don't see much value in snapshot testing or other automated UI testing approaches. E.g., visual regression testing is going to create a bunch of images for me to look at and compare. I might as well just look at the UI and compare it to what I expect.
+For testing the behavior of the UI, just open index.html in a browser and click through manually. I don't see much value in snapshot testing or other automated UI testing approaches.
 
 ## Licensing
 
@@ -31,7 +31,7 @@ My code and other files in this repository are licensed under the MIT open sourc
 
 But if you see a LICENSE file in a sub-directory of the repository, that license will apply to all files found in that directory.
 
-Also, avoid using fonts or other resources hosted from shared.wisp.studio. The website has CORS rules that prevent resources to be served from pages that don't match either "localhost:3000" or one of my domains. You can circumvent this, e.g., downloading the file and re-hosting it. But some files at that website have licenses that I purchased which aren't transferable to you.
+Also, avoid using fonts or other resources hosted from decentapps.net. The website has CORS rules that prevent resources to be served from pages that don't match either "localhost:3000" or one of my domains. You can circumvent this, e.g., downloading the file and re-hosting it. But some files at that website have licenses that I purchased that aren't transferable to you.
 
 ### Contributing
 
