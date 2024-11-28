@@ -1,10 +1,6 @@
 import styles from './ProgressBar.module.css';
 import StripedProgressImage from './images/stripedProgress.png';
 
-const INNER_MARGIN = 1;
-const INNER_WIDTH = 100 - (INNER_MARGIN * 2);
-const INNER_HEIGHT = 100 - (INNER_MARGIN * 2);
-
 function _percent(value:number) {
   return `${value}%`;
 }
@@ -15,6 +11,7 @@ interface IProps {
 
 function ProgressBar(props:IProps) {
   const {percentComplete} = props;
+  
   return (
     <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="<http://www.w3.org/2000/svg>" className={styles.container}>
       <defs>
@@ -31,12 +28,10 @@ function ProgressBar(props:IProps) {
         fill='#222'
       />
       <rect
-        x={_percent(INNER_MARGIN)}
-        y={_percent(INNER_MARGIN)}
-        rx='1%'
-        ry='3%'
-        width={_percent(percentComplete * INNER_WIDTH)}
-        height = {_percent(INNER_HEIGHT)}
+        x='0'
+        y='0'
+        width={_percent(percentComplete * 100)}
+        height = '100%'
         fill='url(#imgpattern)'
         stroke='#000000'
         strokeWidth={.1}
