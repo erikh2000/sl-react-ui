@@ -18,8 +18,8 @@ function useEffectOnce(effect:EffectCallback, deps:DependencyList|undefined) {
 }
 
 /*
- You wrote this hook because you wanted to use useEffect for mounting/unmounting. But it's not good idea. The reasons
- are complicated enough that you'll probably forget them, so here's a reminder:
+ You wrote this hook because you wanted to use useEffect for mounting/unmounting. But using this hook is not a good idea. 
+ The reasons are complicated enough that you'll probably forget them, so here's a reminder:
  
  * The reason useEffect() gets called twice for mounting is due to React strict mode, which is a safeguard to help
    identify problems with event code being written incorrectly.
