@@ -7,6 +7,7 @@ export type { IDrawCallback } from './components/canvas/Canvas';
 export { default as ContentButton } from './components/contentButton/ContentButton';
 export { default as LoadingBox } from './components/loadingBox/LoadingBox';
 export { default as ConfirmCancelDialog } from './components/modalDialogs/ConfirmCancelDialog';
+export { default as DatePicker } from './components/datePicker/DatePicker';
 export { default as DialogButton } from './components/modalDialogs/DialogButton';
 export { default as DialogFooter } from './components/modalDialogs/DialogFooter';
 export { default as DialogLabeledText } from './components/modalDialogs/DialogLabeledText';

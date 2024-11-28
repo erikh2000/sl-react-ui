@@ -13,6 +13,7 @@ import PaneGalleryItem from "@/components/pane/PaneGalleryItem";
 import ActionBarGalleryItem from "@/components/actionBar/ActionBarGalleryItem";
 import SpinnerGalleryItem from './components/spinner/SpinnerGalleryItem';
 import TimePickerGalleryItem from './components/timePicker/TimePickerGalleryItem';
+import DatePickerGalleryItem from './components/datePicker/DatePickerGalleryItem';
 
 function Gallery() {
   return (
@@ -22,6 +23,7 @@ function Gallery() {
       <ActionBarGalleryItem />
       <CanvasGalleryItem />
       <ContentButtonGalleryItem />
+      <DatePickerGalleryItem />
       <ModalDialogsGalleryItem />
       <LoadingBoxGalleryItem />
       <PaneGalleryItem />

@@ -9,6 +9,17 @@ const defaultYear = 2000;
 const defaultMonth = 0;
 const defaultDay = 1;
 
+export function getDaysInMonth(yearI:number, monthI:number):number {
+    const year = parseInt(yearOptions[yearI]);
+    const month = monthI;
+    return new Date(year, month + 1, 0).getDate();
+}
+
+export function getDayOptions(yearI:number, monthI:number):string[] {
+    const daysInMonth = getDaysInMonth(yearI, monthI);
+    return dayOptions.slice(0, daysInMonth);
+}
+
 export function decodeTime(date:Date):[hourI:number, minuteI:number, amPmI:number] {
     const hour = date.getHours();
     const hour12 = hour % 12;
