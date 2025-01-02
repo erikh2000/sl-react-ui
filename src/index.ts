@@ -14,6 +14,7 @@ export { default as DialogButton } from './components/modalDialogs/DialogButton'
 export { default as DialogFooter } from './components/modalDialogs/DialogFooter';
 export { default as DialogLabeledText } from './components/modalDialogs/DialogLabeledText';
 export { default as DialogTextInput } from './components/modalDialogs/DialogTextInput';
+export { default as GeneratedText } from './components/generatedText/GeneratedText';
 export { default as ModalDialog } from './components/modalDialogs/ModalDialog';
 export { default as OkayDialog } from './components/modalDialogs/OkayDialog';
 export { default as TextInputDialog } from './components/modalDialogs/TextInputDialog';

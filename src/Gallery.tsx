@@ -17,6 +17,7 @@ import DatePickerGalleryItem from './components/datePicker/DatePickerGalleryItem
 import WaitingEllipsisGalleryItem from './components/waitingEllipsis/WaitingEllipsisGalleryItem';
 import CheckboxGalleryItem from './components/checkbox/CheckboxGalleryItem';
 import ChecklistGalleryItem from './components/checklist/ChecklistGalleryItem';
+import GeneratedTextGalleryItem from './components/generatedText/GeneratedTextGalleryItem';
 
 function Gallery() {
   return (
@@ -29,6 +30,7 @@ function Gallery() {
       <ChecklistGalleryItem />
       <ContentButtonGalleryItem />
       <DatePickerGalleryItem />
+      <GeneratedTextGalleryItem />
       <ModalDialogsGalleryItem />
       <LoadingBoxGalleryItem />
       <PaneGalleryItem />
