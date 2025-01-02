@@ -19,6 +19,7 @@ import CheckboxGalleryItem from './components/checkbox/CheckboxGalleryItem';
 import ChecklistGalleryItem from './components/checklist/ChecklistGalleryItem';
 import GeneratedTextGalleryItem from './components/generatedText/GeneratedTextGalleryItem';
 import NumericInputGallery from './components/numericInput/NumericInputGalleryItem';
+import NumericInputRangeGalleryItem from './components/numericInputRange/NumericInputRangeGalleryItem';
 
 function Gallery() {
   return (
@@ -34,6 +35,7 @@ function Gallery() {
       <GeneratedTextGalleryItem />
       <ModalDialogsGalleryItem />
       <NumericInputGallery />
+      <NumericInputRangeGalleryItem />
       <LoadingBoxGalleryItem />
       <PaneGalleryItem />
       <ProgressBarGalleryItem />

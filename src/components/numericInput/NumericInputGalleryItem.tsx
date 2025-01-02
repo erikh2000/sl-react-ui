@@ -3,7 +3,7 @@ import { useState } from "react";
 import GalleryItem from "@/components/galleryItem/GalleryItem";
 import NumericInput from "./NumericInput";
 
-function NumericInputGallery() {
+function NumericInputGalleryItem() {
   const [value1, setValue1] = useState(5);
   const [value2, setValue2] = useState(5.7);
 
@@ -17,4 +17,4 @@ function NumericInputGallery() {
   );
 }
 
-export default NumericInputGallery;
+export default NumericInputGalleryItem;
