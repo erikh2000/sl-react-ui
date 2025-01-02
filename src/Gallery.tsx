@@ -20,6 +20,7 @@ import ChecklistGalleryItem from './components/checklist/ChecklistGalleryItem';
 import GeneratedTextGalleryItem from './components/generatedText/GeneratedTextGalleryItem';
 import NumericInputGallery from './components/numericInput/NumericInputGalleryItem';
 import NumericInputRangeGalleryItem from './components/numericInputRange/NumericInputRangeGalleryItem';
+import SheetTableGalleryItem from './components/sheetTable/SheetTableGalleryItem';
 
 function Gallery() {
   return (
@@ -40,6 +41,7 @@ function Gallery() {
       <PaneGalleryItem />
       <ProgressBarGalleryItem />
       <SelectorGalleryItem />
+      <SheetTableGalleryItem />
       <SliderGalleryItem />
       <SpinnerGalleryItem />
       <TextConsoleGalleryItem />

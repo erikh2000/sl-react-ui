@@ -23,6 +23,10 @@ export { default as TextInputDialog } from './components/modalDialogs/TextInputD
 export { default as Pane } from './components/pane/Pane';
 export { default as ProgressBar } from './components/progressBar/ProgressBar';
 export { default as Selector } from './components/selector/Selector';
+export { default as SheetTable } from './components/sheetTable/SheetTable';
+export type { default as GeneratedFooterText } from './components/sheetTable/types/GeneratedFooterText';
+export type { default as VerticalScroll } from './components/sheetTable/types/VerticalScroll';
+export type { default as HorizontalScroll } from './components/sheetTable/types/HorizontalScroll';
 export { default as Slider } from './components/slider/Slider';
 export { default as Spinner } from './components/spinner/Spinner';
 export { default as TextConsole } from './components/textConsole/TextConsole';
