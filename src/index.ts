@@ -5,6 +5,7 @@ export { default as ActionBar } from './components/actionBar/ActionBar';
 export { default as Canvas } from './components/canvas/Canvas';
 export type { IDrawCallback } from './components/canvas/Canvas';
 export { default as Checkbox } from './components/checkbox/Checkbox';
+export { default as Checklist } from './components/checklist/Checklist';
 export { default as ContentButton } from './components/contentButton/ContentButton';
 export { default as LoadingBox } from './components/loadingBox/LoadingBox';
 export { default as ConfirmCancelDialog } from './components/modalDialogs/ConfirmCancelDialog';
