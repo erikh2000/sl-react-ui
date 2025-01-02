@@ -16,6 +16,7 @@ export { default as DialogLabeledText } from './components/modalDialogs/DialogLa
 export { default as DialogTextInput } from './components/modalDialogs/DialogTextInput';
 export { default as GeneratedText } from './components/generatedText/GeneratedText';
 export { default as ModalDialog } from './components/modalDialogs/ModalDialog';
+export { default as NumericInput } from './components/numericInput/NumericInput';
 export { default as OkayDialog } from './components/modalDialogs/OkayDialog';
 export { default as TextInputDialog } from './components/modalDialogs/TextInputDialog';
 export { default as Pane } from './components/pane/Pane';

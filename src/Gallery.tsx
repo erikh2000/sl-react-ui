@@ -18,6 +18,7 @@ import WaitingEllipsisGalleryItem from './components/waitingEllipsis/WaitingElli
 import CheckboxGalleryItem from './components/checkbox/CheckboxGalleryItem';
 import ChecklistGalleryItem from './components/checklist/ChecklistGalleryItem';
 import GeneratedTextGalleryItem from './components/generatedText/GeneratedTextGalleryItem';
+import NumericInputGallery from './components/numericInput/NumericInputGalleryItem';
 
 function Gallery() {
   return (
@@ -32,6 +33,7 @@ function Gallery() {
       <DatePickerGalleryItem />
       <GeneratedTextGalleryItem />
       <ModalDialogsGalleryItem />
+      <NumericInputGallery />
       <LoadingBoxGalleryItem />
       <PaneGalleryItem />
       <ProgressBarGalleryItem />
