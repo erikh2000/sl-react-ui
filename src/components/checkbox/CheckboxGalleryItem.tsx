@@ -3,7 +3,7 @@ import { useState } from "react";
 import GalleryItem from "@/components/galleryItem/GalleryItem";
 import Checkbox from "./Checkbox";
 
-function ContentButtonGallery() {
+function CheckboxGallery() {
   const [isChecked1, setChecked1] = useState(false);
   const [isChecked2, setChecked2] = useState(false);
 
@@ -15,4 +15,4 @@ function ContentButtonGallery() {
   );
 }
 
-export default ContentButtonGallery;
+export default CheckboxGallery;
