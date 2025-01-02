@@ -28,7 +28,7 @@ function GeneratedTextGalleryItem() {
   const [wordIndex, setWordIndex] = useState<number>(0);
   
   return (
-    <GalleryItem title="GeneratedText" description="For displaying text that is generated incrementally by something like an LLM.">
+    <GalleryItem title="Generated Text" description="For displaying text that is generated incrementally by something like an LLM.">
       <ContentButton onClick={() => _addWord(words, wordIndex, setText, setWordIndex)} text="Add a Word" /><br />
       <GeneratedText text={text} />
     </GalleryItem>
