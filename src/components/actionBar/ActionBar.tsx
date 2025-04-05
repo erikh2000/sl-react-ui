@@ -1,6 +1,8 @@
 import styles from './ActionBar.module.css';
 import ActionBarButton from "./ActionBarButton";
 
+import { JSX } from 'react';
+
 export type ButtonDefinition = {
   groupNo:number,
   text:string,

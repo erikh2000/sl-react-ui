@@ -1,6 +1,6 @@
 import styles from './TextConsole.module.css'
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, JSX } from 'react';
 import {TextConsoleLine} from "./TextConsoleBuffer";
 
 export type RenderLineCallback = (key:number, text:string) => JSX.Element;

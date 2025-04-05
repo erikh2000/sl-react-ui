@@ -23,23 +23,25 @@ type Props = {
 }
 
 function SheetTable({columnNames, rows, footerText, displayRowCount, selectedRowNo, onSelectCell, generatedColNo, horizontalScroll, verticalScroll}:Props) {
-  const sheetTableElement = useRef<HTMLDivElement>(null);
-  const headerInnerElement = useRef<HTMLDivElement>(null);
-  const rowsScrollElement = useRef<HTMLDivElement>(null);
+  const sheetTableElementRef = useRef<HTMLDivElement>(null);
+  const headerInnerElementRef = useRef<HTMLDivElement>(null);
+  const rowsScrollElementRef = useRef<HTMLDivElement>(null);
   const [columnWidths, setColumnWidths] = useState<number[]>([]);
 
   useEffect(() => {
-    if (!sheetTableElement.current) return;
-    const nextColumnWidths:number[] = measureColumnWidths(sheetTableElement.current, columnNames, rows);
+    if (!sheetTableElementRef.current) return;
+    const nextColumnWidths:number[] = measureColumnWidths(sheetTableElementRef.current, columnNames, rows);
     setColumnWidths(nextColumnWidths);
   }, [columnNames, rows]);
 
   useEffect(() => {
-    setHorizontalScroll(rowsScrollElement, horizontalScroll);
+    if (!rowsScrollElementRef.current) return;
+    setHorizontalScroll(rowsScrollElementRef.current, horizontalScroll);
   }, [horizontalScroll]);
 
   useEffect(() => {
-    setVerticalScroll(rowsScrollElement, verticalScroll);
+    if (!rowsScrollElementRef.current) return;
+    setVerticalScroll(rowsScrollElementRef.current, verticalScroll);
   }, [verticalScroll]);
 
   const rowCount = rows.length;
@@ -48,15 +50,18 @@ function SheetTable({columnNames, rows, footerText, displayRowCount, selectedRow
       isSelected={rowI+1===selectedRowNo} onSelectCell={onSelectCell} generatedColNo={generatedColNo}/>
   );
   
-  const rowScrollContainerStyle = getRowScrollContainerStyle(displayRowCount, rowsScrollElement.current);
+  const rowScrollContainerStyle = getRowScrollContainerStyle(displayRowCount, rowsScrollElementRef.current);
   const displayFooterText = getFooterText(footerText, rows);
   return (
-    <div className={styles.sheetTable} ref={sheetTableElement}>
+    <div className={styles.sheetTable} ref={sheetTableElementRef}>
       <div className={styles.headerScrollContainer}>
-        <SheetHeader columnNames={columnNames} columnWidths={columnWidths} ref={headerInnerElement}/>
+        <SheetHeader columnNames={columnNames} columnWidths={columnWidths} ref={headerInnerElementRef}/>
       </div>
-      <div className={styles.rowsScrollContainer} style={rowScrollContainerStyle} ref={rowsScrollElement} 
-          onScroll={() => syncScrollableElements(headerInnerElement, rowsScrollElement)}>
+      <div className={styles.rowsScrollContainer} style={rowScrollContainerStyle} ref={rowsScrollElementRef} 
+          onScroll={() => {
+            if (!headerInnerElementRef.current || !rowsScrollElementRef.current) return;
+            syncScrollableElements(headerInnerElementRef.current, rowsScrollElementRef.current)
+          }}>
         <div className={styles.rowsInnerContainer}>
           {rowsContent}
         </div>
