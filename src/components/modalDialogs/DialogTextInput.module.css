@@ -1,3 +1,6 @@
+@value colors: "@/components/commonPalette.module.css";
+@value button from colors;
+
 .textInputLine {
     height: 2rem;
 }
@@ -11,6 +14,12 @@
     right: 2rem;
     position: absolute;
     min-width: 60%;
+}
+
+.textInputLineValue:focus {
+    border-style: solid;
+    border-color: button;
+    outline: none;
 }
 
 .textInputLineLabel {

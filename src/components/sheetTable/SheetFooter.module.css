@@ -1,0 +1,10 @@
+.footer {
+  width:auto;
+  background-color: lightgrey;
+  margin-top: -.4vh;
+  font-size: 1.2vh;
+  color: darkgrey;
+  margin-top: .3vh;
+  margin-right: .3vh;
+  text-align: right;
+}

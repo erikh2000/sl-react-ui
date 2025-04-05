@@ -1,0 +1,13 @@
+.sheetHeader {
+  display: flex; 
+  background-color: lightgrey;
+}
+
+.sheetHeader span {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: -.3vh;
+  margin-bottom: .2vh;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}

@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.contentBox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  background-color:antiquewhite;
+  width: 25vh;
+  border-color: black;
+  border-width: 0.2vh;
+  border-radius: 1vh;
+  border-style: solid;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.contentBoxRight {
+  left: 95%;
+}
+
+.contentBoxLeft {
+  left: -160%;
+}

@@ -1,0 +1,68 @@
+@value disableSelect from "@/components/commonStyles.module.css";
+
+.sheetRow {
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+}
+
+.measureCellText {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.5vh;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.sheetCell {
+  composes: disableSelect;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.5vh;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  background-color: #f2f2f2;
+  border-style: hidden;
+}
+
+.selected {
+  background-color: #E2D7C5;
+}
+
+.selectable::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+  background-size: 10px 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.selectable:hover::after {
+  opacity: 1; /* Show hatching on hover */
+}
+
+.oddRow {
+  background-color: #ffffff;
+}
+
+.topLeft {
+  border-top-left-radius: 1vh;
+}
+
+.topRight {
+  border-top-right-radius: 1vh;
+}
+
+.bottomLeft {
+  border-bottom-left-radius: 1vh;
+}
+
+.bottomRight {
+  border-bottom-right-radius: 1vh;
+}
