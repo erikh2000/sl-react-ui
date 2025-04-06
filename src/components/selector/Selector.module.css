@@ -14,14 +14,17 @@
     composes: disableSelect;
     flex-grow: 0;
     min-width: 7rem;
-    font-size: 1.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 1.3rem;
 }
 
 .selectorButton {
     composes: disableSelect;
     justify-content: center;
     background-color: button;
-    border-style: none;
+    border-style: none solid none none;
+    border-color: #aa6226;
     background-position: center;
     transition: background 0.2s;
     cursor: pointer;
@@ -48,8 +51,8 @@
 }
 
 .selectorButtonText {
-    padding-left: .1rem;
-    padding-right: .1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
     letter-spacing: .1rem;
     font-size: 1.1rem;
     color: button-text;

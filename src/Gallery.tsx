@@ -21,6 +21,7 @@ import GeneratedTextGalleryItem from './components/generatedText/GeneratedTextGa
 import NumericInputGallery from './components/numericInput/NumericInputGalleryItem';
 import NumericInputRangeGalleryItem from './components/numericInputRange/NumericInputRangeGalleryItem';
 import SheetTableGalleryItem from './components/sheetTable/SheetTableGalleryItem';
+import LivingSvgGallery from './components/livingSvg/LivingSvgGalleryItem';
 
 function Gallery() {
   return (
@@ -37,6 +38,7 @@ function Gallery() {
       <ModalDialogsGalleryItem />
       <NumericInputGallery />
       <NumericInputRangeGalleryItem />
+      <LivingSvgGallery />
       <LoadingBoxGalleryItem />
       <PaneGalleryItem />
       <ProgressBarGalleryItem />
