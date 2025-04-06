@@ -5,7 +5,7 @@ function _percent(value:number) {
   return `${value}%`;
 }
 
-type Props {
+type Props = {
   percentComplete: number
 }
 
